@@ -1,0 +1,11 @@
+services:
+  pyspark:
+    build: .
+    container_name: lab7-pyspark
+    working_dir: /opt/app
+    volumes:
+      - .:/opt/app
+    ports:
+      - "8888:8888"
+    environment:
+      JAVA_HOME: /usr/lib/jvm/java-17-openjdk-amd64
